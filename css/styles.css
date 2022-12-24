@@ -710,7 +710,7 @@ color: #FFFFFF;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     color: var(--hero-title-color);
 }
 
@@ -788,9 +788,10 @@ color: #FFFFFF;
 .modal {
     position: absolute;
     width: 528px;
-    min-height: 581px;
+    height: 581px;
     top: 50%;
     left: 50%;
+    padding: 40px;
     transform: translate(-50%, -50%) scale(1);
     background-color: var(--hero-title-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -821,10 +822,7 @@ color: #FFFFFF;
 
   /*---------------------FORM MODAL------------*/
 
-  .modal-form {
-    padding: 40px;
-  }
-
+ 
   .title-modal {
     font-weight: 700;
     margin-bottom: 12px;
@@ -843,9 +841,7 @@ color: #FFFFFF;
     outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    cursor: pointer;
-    transition: color 250ms var(--cubic-animation),
-      fill 250ms var(--cubic-animation);
+    transition: border-color 250ms var(--cubic-animation);
   }
 
   .modal-textarea {
@@ -859,7 +855,7 @@ color: #FFFFFF;
     cursor: pointer;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    transition: border 250ms var(--cubic-animation);
+    transition: border-color 250ms var(--cubic-animation);
   }
 
   .a-modal {
@@ -870,15 +866,15 @@ color: #FFFFFF;
   }
 
   .label-text {
-    position: relative;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--second-text-color);
   }
 
-  .form-tel+.form-tel {
-    margin-top: 10px;
+  .form-tel {
+    position: relative;
+    margin-bottom: 10px;
   }
 
   .form-text {
@@ -886,7 +882,8 @@ color: #FFFFFF;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.17;
+    line-height: 1.167;
+    display: block;
     letter-spacing: 0.01em;
     color: var(--second-text-color);
   }
@@ -899,18 +896,19 @@ color: #FFFFFF;
   .modal-check {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
     color: var(--second-text-color);
   }
 
   .check-text {
     margin-left: 9px;
-  }
-
-  .check {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
   }
 
   .icon-check {
@@ -947,21 +945,22 @@ color: #FFFFFF;
   }
 
   .modal-input:focus~.icon-modal {
-    color: var(--accent-color);
     fill: var(--accent-color);
   }
 
   .modal-textarea:focus,
   .modal-input:focus {
     border: 1px solid var(--accent-color);
+    border-color: var(--accent-color);
   }
 
   .icon-modal {
     position: absolute;
+    top: 50%; 
     width: 18px;
     height: 18px;
-    top: 32px;
     left: 10px;
+    transition: fill 250ms var(--cubic-animation);
   }
 
   .form-modal-btn {
